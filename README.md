@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div align="center">
   <img src="https://raw.githubusercontent.com/harshitsingh070/Snap-Note/main/assets/images/logo.png" alt="Snap Note Logo" width="150" height="150">
   <h1>Snap Note</h1>
@@ -6,7 +5,6 @@
   <p>Your intelligent companion for transforming visual notes into searchable digital text.</p>
 
   <p>
-    <a href="https://github.com/harshitsingh070/Snap-Note/actions"><img src="https://github.com/harshitsingh070/Snap-Note/workflows/flutter/badge.svg" alt="Build Status"></a>
     <img src="https://img.shields.io/badge/Flutter-3.x.x-blue?logo=flutter" alt="Flutter Version">
     <img src="https://img.shields.io/badge/Platform-Android%20%7C%20iOS%20%7C%20Web-lightgrey" alt="Platforms">
     <img src="https://img.shields.io/badge/License-MIT-green" alt="License">
@@ -108,12 +106,8 @@ Contributions are welcome! If you find bugs or have feature ideas, please open a
 
 
 <div align="center">
-  <p>Made with ❤️ by [Harshit Singh]</p>
+  <p>Made with ❤️ by Harshit Singh</p>
   <p><a href="mailto:harshitsingh2807@gmail.com">Contact Us</a></p>
 </div>
 
 <br>
-=======
-# Snap-Note
-Snap Note is a modern, cross-platform application designed to bridge the gap between physical visual information and searchable digital text.
->>>>>>> fc955a54a063ac55ad6f810db246c65cba6f8ef3

@@ -1,14 +1,13 @@
-// lib/services/notes_service.dart
-import 'dart:io'; // For File operations
-import 'dart:typed_data'; // For Uint8List
+import 'dart:io'; 
+import 'dart:typed_data'; 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
 import 'package:visual_notes/models/note.dart';
 import 'package:visual_notes/utils/custom_snackbars.dart';
-import 'package:image/image.dart' as img_lib; // For image pre-processing
-import 'package:path_provider/path_provider.dart'; // For temporary directory access
+import 'package:image/image.dart' as img_lib; 
+import 'package:path_provider/path_provider.dart'; 
 
 class NotesService extends ChangeNotifier {
   final SupabaseClient _supabase = Supabase.instance.client;
@@ -62,7 +61,7 @@ class NotesService extends ChangeNotifier {
     }
   }
 
-  // --- Add a new note (Image Picker -> OCR -> Upload to Storage -> Save to DB) ---
+ 
   Future<void> addNote({
     required BuildContext context,
     required String title,
@@ -70,8 +69,8 @@ class NotesService extends ChangeNotifier {
   }) async {
     _setLoading(true);
 
-    // Declare variables outside try block so they are accessible in finally
-    String? originalImagePath; // Made nullable to handle initial pick failure
+    
+    String? originalImagePath; 
     String? processedImagePath; // Made nullable
 
     try {
@@ -97,7 +96,7 @@ class NotesService extends ChangeNotifier {
       }
 
       originalImagePath = pickedImage.path;
-      processedImagePath = originalImagePath; // Initialize with original path
+      processedImagePath = originalImagePath; 
 
       // --- Image Pre-processing for better OCR ---
       try {
@@ -116,9 +115,7 @@ class NotesService extends ChangeNotifier {
         print('Error during image pre-processing (grayscale): $e. Using original image.');
         // Fallback to original image if pre-processing fails
       }
-      // --- END Image Pre-processing ---
-
-      // 2. Perform OCR with Google ML Kit using the PROCESSED image
+      
       final InputImage inputImage = InputImage.fromFilePath(processedImagePath!); // Use null-check or '!' if confident
       final RecognizedText recognizedText = await textRecognizer.processImage(
         inputImage,

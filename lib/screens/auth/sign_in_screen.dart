@@ -1,4 +1,4 @@
-// lib/screens/auth/sign_in_screen.dart
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:visual_notes/screens/auth/sign_up_screen.dart';
@@ -30,7 +30,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sign In', style: Theme.of(context).textTheme.titleLarge), // Use text theme
+        title: Text('Sign In', style: Theme.of(context).textTheme.titleLarge),
         centerTitle: true,
       ),
       body: Center(
@@ -42,10 +42,28 @@ class _SignInScreenState extends State<SignInScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                // --- ADDED LOGO HERE ---
+                Center(
+                  child: CircleAvatar(
+                    radius: 55, // Adjust size as needed
+                    backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.1),
+                    child: ClipOval(
+                      child: Image.asset(
+                        'assets/images/logo.png',
+                        width: 100, 
+                        height: 100,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 24),
+              
+
                 Text(
                   'Welcome Back!',
                   style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                        color: Theme.of(context).colorScheme.onSurface, // Darker text
+                        color: Theme.of(context).colorScheme.onBackground,
                       ),
                   textAlign: TextAlign.center,
                 ),

@@ -1,4 +1,3 @@
-// lib/main.dart
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -12,7 +11,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Load the .env file
+  
   await dotenv.load(fileName: ".env");
 
   // Initialize Supabase using values from .env
@@ -42,25 +41,25 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // Core Colors for an iOS-like feel
-        primarySwatch: Colors.blueGrey, // A base for generating shades
-        primaryColor: const Color(0xFF5AC8FA), // Light Blue (iOS accent)
-        splashColor: const Color(0xFF007AFF).withOpacity(0.2), // Blue tint for splash
-        highlightColor: Colors.transparent, // Remove default highlight
-        scaffoldBackgroundColor: const Color(0xFFF2F2F7), // iOS background grey
+        primarySwatch: Colors.blueGrey, 
+        primaryColor: const Color(0xFF5AC8FA), 
+        splashColor: const Color(0xFF007AFF).withOpacity(0.2), 
+        highlightColor: Colors.transparent, 
+        scaffoldBackgroundColor: const Color(0xFFF2F2F7), 
 
         colorScheme: const ColorScheme.light(
-          primary: Color(0xFF007AFF), // iOS Blue
-          secondary: Color(0xFFFF9500), // iOS background grey
-          surface: Colors.white, // Card/sheet background
-          error: Color(0xFFFF3B30), // iOS Red
+          primary: Color(0xFF007AFF), 
+          secondary: Color(0xFFFF9500), 
+          surface: Colors.white, 
+          error: Color(0xFFFF3B30), 
           onPrimary: Colors.white,
-          onSecondary: Colors.white, // Dark text on light background
+          onSecondary: Colors.white, 
           onSurface: Color(0xFF1C1C1E),
           onError: Colors.white,
         ),
         brightness: Brightness.light,
 
-        // Typography using Rubik (clean, modern, slightly rounded)
+       
         fontFamily: GoogleFonts.rubik().fontFamily,
         textTheme: GoogleFonts.rubikTextTheme(
           Theme.of(context).textTheme.copyWith(
@@ -78,7 +77,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
 
-        // AppBar Theme (Clean, translucent-like, iOS-inspired)
+    
         appBarTheme: AppBarTheme(
           backgroundColor: const Color(0xFFF2F2F7).withOpacity(0.95), // Slightly transparent background
           foregroundColor: const Color(0xFF1C1C1E), // Dark text/icons
@@ -92,7 +91,7 @@ class MyApp extends StatelessWidget {
           iconTheme: const IconThemeData(color: Color(0xFF007AFF)), // iOS Blue for icons
         ),
 
-        // Input Field Decoration Theme (Clean, filled, rounded)
+       
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
           fillColor: Colors.white,
@@ -124,7 +123,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
 
-        // Elevated Button Theme (Filled, rounded, subtle shadow)
+        
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             backgroundColor: Theme.of(context).colorScheme.primary, // iOS Blue
@@ -147,14 +146,14 @@ class MyApp extends StatelessWidget {
           ),
         ),
 
-        // Floating Action Button Theme (iOS Orange)
+        
         floatingActionButtonTheme: FloatingActionButtonThemeData(
           backgroundColor: Theme.of(context).colorScheme.secondary,
           foregroundColor: Colors.white,
           elevation: 5,
         ),
 
-        // Card Theme (White background, rounded, subtle shadow)
+        
         cardTheme: CardTheme(
           elevation: 1.5, // Subtle shadow for cards
           shadowColor: Colors.grey.withOpacity(0.1),

@@ -8,6 +8,7 @@ class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
 
   @override
+
   State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
@@ -43,10 +44,28 @@ class _SignUpScreenState extends State<SignUpScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                // --- ADDED LOGO HERE ---
+                Center(
+                  child: CircleAvatar(
+                    radius: 55, // Adjust size as needed
+                    backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.1),
+                    child: ClipOval(
+                      child: Image.asset(
+                        'assets/images/logo.png', // <--- REPLACE with your actual logo path
+                        width: 100, // Adjust to fit CircleAvatar
+                        height: 100, // Adjust to fit CircleAvatar
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 24), // Spacing below logo
+                // --- END LOGO ADDITION ---
+
                 Text(
                   'Create Your Account',
                   style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                        color: Theme.of(context).colorScheme.onSurface,
+                        color: Theme.of(context).colorScheme.onBackground,
                       ),
                   textAlign: TextAlign.center,
                 ),
