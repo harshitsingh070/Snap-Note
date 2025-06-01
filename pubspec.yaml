@@ -1,0 +1,71 @@
+name: visual_notes
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  # Supabase integration
+  supabase_flutter: ^2.5.0 # Ensure you use the latest stable version
+  
+ 
+
+  # Image handling
+  image_picker: ^1.0.4    # Latest stable version
+  cached_network_image: ^3.3.1 # Latest stable version for efficient image loading
+
+  # ML Kit Text Recognition (On-device OCR)
+  google_mlkit_text_recognition: ^0.13.0 # Latest stable version
+
+  # State management (Provider is simple and effective for clean UI)
+  provider: ^6.1.5
+  google_mlkit_commons: ^0.7.1
+
+  # UI Enhancements (optional, but good for clean look)
+  google_fonts: ^6.1.0 # Latest stable version, for custom fonts
+  cupertino_icons: ^1.0.2 # Default, ensure it's there
+  photo_view: ^0.15.0
+  intl: ^0.20.2
+  flutter_dotenv: ^5.1.0 
+  image: ^4.1.3
+  path_provider: ^2.1.3
+  flutter_launcher_icons: "^0.13.1"
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+ 
+  flutter_lints: ^5.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - .env
+
+
+
+flutter_launcher_icons:
+  android: "launcher_icon" # Or true, or a custom name like "my_app_icon"
+  ios: true                # Set to true to generate for iOS, or a custom name
+  image_path: "assets/images/logo.png" # <--- Path to your main icon image
+
+  adaptive_icon_background: "#ffffff" # Or an image path like "assets/images/logo_background.png"
+  adaptive_icon_foreground: "assets/images/logo.png" # Path to your foreground image (e.g., logo itself)
+
+  min_sdk_android: 21 # Set to your project's minSdkVersion (from android/app/build.gradle.kts). Default is 21.
+
+  # iOS Specific (Optional)
+  remove_alpha_ios: true
