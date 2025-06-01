@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
   <img src="https://raw.githubusercontent.com/harshitsingh070/Snap-Note/main/assets/images/logo.png" alt="Snap Note Logo" width="150" height="150">
   <h1>Snap Note</h1>
@@ -112,3 +113,7 @@ Contributions are welcome! If you find bugs or have feature ideas, please open a
 </div>
 
 <br>
+=======
+# Snap-Note
+Snap Note is a modern, cross-platform application designed to bridge the gap between physical visual information and searchable digital text.
+>>>>>>> fc955a54a063ac55ad6f810db246c65cba6f8ef3
